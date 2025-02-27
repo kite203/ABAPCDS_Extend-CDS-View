@@ -1,0 +1,8 @@
+@AbapCatalog.sqlViewAppendName: 'ZSCFIGLACCTITMS'
+@EndUserText.label: 'G/L Line Items w. Semantic Tags'
+extend view C_GLAccountLineItemSemTag with ZSFI_C_GLACCTLINEITEMSEMTAG
+{
+  //Add back fields available in I_GLAccountLineItemSemTag
+  I_GLAccountLineItemSemTag.SalesOrder,
+  I_GLAccountLineItemSemTag.SalesOrderItem
+}
